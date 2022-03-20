@@ -8,7 +8,7 @@ export const GlobalStyle = createGlobalStyle`
     }
 
     body {
-        font-family: Arial, Helvetica, sans-serif;
+        font-family: 'Poppins', sans-serif;
         background-color: #333;
         color: #fff;
 
