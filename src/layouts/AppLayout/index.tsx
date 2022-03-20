@@ -1,14 +1,10 @@
-import { ReactNode } from 'react';
+import { Outlet } from 'react-router-dom';
 import { Container } from './styles';
 
-interface AppLayoutProps {
-    children: ReactNode;
-}
-
-export function AppLayout({ children }: AppLayoutProps) {
+export function AppLayout() {
     return (
         <Container>
-            {children}
+            <Outlet />
         </Container>
     );
 }
