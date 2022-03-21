@@ -19,6 +19,17 @@ createServer({
 
       return users;
     });
+
+    this.get('/products', () => {
+      const products = [
+        { id: 1, description: 'Rice' },
+        { id: 2, description: 'Beans' },
+        { id: 3, description: 'Soap' },
+        { id: 4, description: 'Bread' }
+      ];
+
+      return products;
+    });
   }
 });
 
