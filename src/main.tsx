@@ -33,6 +33,12 @@ createServer({
 
     // API Endpoints
     this.get('/users', () => this.schema.all('user'));
+    this.post('/users', (schema, request) => {
+      const user = JSON.parse(request.requestBody);
+
+      return schema.create('user', user);
+    });
+
     this.get('/products', () => this.schema.all('product'));
   }
 });
