@@ -16,6 +16,13 @@ createServer({
         { id: 2, name: 'Miryam Santana' },
         { id: 3, name: 'Lívia Rodrigues' },
         { id: 4, name: 'Valdir Xavier' }
+      ],
+
+      products: [
+        { id: 1, description: 'Rice' },
+        { id: 2, description: 'Beans' },
+        { id: 3, description: 'Soap' },
+        { id: 4, description: 'Bread' }
       ]
     });
   },
@@ -26,17 +33,7 @@ createServer({
 
     // API Endpoints
     this.get('/users', () => this.schema.all('user'));
-
-    this.get('/products', () => {
-      const products = [
-        { id: 1, description: 'Rice' },
-        { id: 2, description: 'Beans' },
-        { id: 3, description: 'Soap' },
-        { id: 4, description: 'Bread' }
-      ];
-
-      return products;
-    });
+    this.get('/products', () => this.schema.all('product'));
   }
 });
 
