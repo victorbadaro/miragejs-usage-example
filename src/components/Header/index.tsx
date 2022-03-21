@@ -5,7 +5,7 @@ export function Header() {
     return (
         <Container>
             <div>
-                <Link to="/">Users</Link>
+                <Link to="/users">Users</Link>
                 <Link to="/products">Products</Link>
             </div>
         </Container>
