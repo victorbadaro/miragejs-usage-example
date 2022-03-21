@@ -1,9 +1,14 @@
-import { createServer } from 'miragejs';
+import { createServer, Model } from 'miragejs';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { App } from './App';
 
 createServer({
+  models: {
+    user: Model,
+    product: Model
+  },
+
   routes() {
     // API Prefix
     this.namespace = 'api';
